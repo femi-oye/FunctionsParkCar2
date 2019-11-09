@@ -1,0 +1,12 @@
+body {
+    background-color: #ff7f7f;
+    font-family: 'Courier New', Courier, monospace;
+}
+.divpadding {
+    padding-bottom: 20px;
+}
+hr {
+    border: 1px dashed #000;
+}
+
+    

@@ -32,11 +32,15 @@ function readyNow() {
 
 // function to create new car and push to parkCars array for user input from getCarDetails
 function addToCarDetails(carName){
-    parkCarsDB.push(new Cars (carName));
-    console.log(parkCarsDB);
-    displayCarDetails();
+    if (parkCarsDB.length < garage){
+        parkCarsDB.push(new Cars (carName));
+        console.log("Your " + carName + " is parked");
+        displayCarDetails();
+    } 
+        else
+        console.log("You cannot park here");
+    
 
-    return true;
 
 }
 // function to display Cars to user
@@ -44,10 +48,16 @@ function displayCarDetails(){
     let outputEl = $('#displayDiv');
     outputEl.empty();
     for (car of parkCarsDB){
-        outputEl.append(`<li> ${car.carName} </li>`);
+        outputEl.append(`<li>Your ${car.carName} is parked</li>`);
 
     }
     return true;
 
 } // end displayCarDetails
+
+// function to display garage size
+function garageSpace(){
+    let space = parkCarsDB.length;
+    displaySpace();
+} // end garageSpace
 

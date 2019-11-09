@@ -9,4 +9,6 @@ hr {
     border: 1px dashed #000;
 }
 
-    
+#inputDiv{
+   justify-content: center;
+}   
